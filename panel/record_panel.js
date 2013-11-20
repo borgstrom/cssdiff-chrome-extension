@@ -14,6 +14,7 @@ function addRecordListener(e) {
 				$("#before").val(resources[i].type);
 				var c = resources[i].getContent(function(content, encoding){
 		    		$("#before").val(content);	
+					chrome.devtools.inspectedWindow.eval('console.log("content:'+"hello content"+'")');
 		    		// if (!$(e.target).hasClass("recording")) {
 		    		// 	$("#after").val(content);	
 
@@ -29,6 +30,7 @@ function addRecordListener(e) {
 	});
 	// listen for a inspector style change
 	chrome.devtools.inspectedWindow.onResourceContentCommitted.addListener(function(resource, content) {
+		chrome.devtools.inspectedWindow.eval('console.log("content:'+content+'")');
 	    $("#after").val("");
 	    $("#after").val(content);
 	})
