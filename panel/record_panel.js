@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 
 function addRecordListener(e) {
-	 console.log("Hello, world!")
+	 chrome.extension.getBackgroundPage().console.log("Hello, world!")
 	// get the current styles of the page
 	$(e.target).toggleClass("recording");
 	chrome.devtools.inspectedWindow.getResources(function(resources) {
