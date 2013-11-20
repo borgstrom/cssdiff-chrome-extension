@@ -1,0 +1,13 @@
+{
+  "name": "CSS Diff Generator",
+  "description": "This extension records css changes in chrome inspector.",
+  "version": "0.1",
+  "permissions": ["contextMenus","background"],
+  "devtools_page": "panel.html",
+  "options_page": "panel/record_panel.html",
+  "background": {
+    "page": "background.html"
+  },
+  "content_security_policy": "default-src 'self'  chrome-extension-resource: ; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-eval';  connect-src *; frame-src *;",
+  "manifest_version": 2
+}

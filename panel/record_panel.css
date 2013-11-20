@@ -1,0 +1,16 @@
+textarea {
+	width: 100%;
+	height: 100%;
+}
+.text-area {
+	float: left;
+	background-color: #DDD;
+	width: 47%;
+	margin-right: 10px;
+	padding: 10px;
+	height: auto;
+}
+button.recording:after {
+  content: 'ING'; 
+
+}
