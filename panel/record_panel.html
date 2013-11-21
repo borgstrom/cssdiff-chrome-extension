@@ -3,9 +3,10 @@
 	<title></title>
 </head>
 <link rel="stylesheet" type="text/css" href="record_panel.css">
+<link rel="stylesheet" type="text/css" href="diffview.css">
 <body>
 	<div>
-		<button>RECORD</button>
+		<button class="record">RECORD</button>
 	</div>
 <div class="text-area">
 	Before:
@@ -16,7 +17,11 @@
 	After:
 	<textarea id="after"></textarea>
 </div>
+<button class="differ">DIFF</button>
+<div id="diffoutput"></div>
 <script src="jquery-min.js"></script>
+<script src="diffview.js"></script>
+<script src="difflib.js"></script>
 <script src="record_panel.js"></script>
 </body>
 </html>
