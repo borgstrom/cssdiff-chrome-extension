@@ -164,10 +164,10 @@ diffview = {
 						addCellsInline(node, null, n++, newTextLines, change);
 					} else if (change == "replace") {
 						botrows.push(node2 = document.createElement("tr"));
-						if (b < be) addCellsInline(node, b++, null, baseTextLines, "delete");
-						if (n < ne) addCellsInline(node2, null, n++, newTextLines, "insert");
+						if (b < be) addCellsInline(node, b++, null, baseTextLines, "delete anchor");
+						if (n < ne) addCellsInline(node2, null, n++, newTextLines, "insert anchor");
 					} else if (change == "delete") {
-						addCellsInline(node, b++, null, baseTextLines, change);
+						addCellsInline(node, b++, null, baseTextLines, change + " anchor");
 					} else {
 						// equal
 						addCellsInline(node, b++, n++, baseTextLines, change);

@@ -4,7 +4,7 @@ textarea {
 }
 .text-area {
 	float: left;
-	background-color: #DDD;
+	background-color: #eee;
 	width: 47%;
 	margin-right: 10px;
 	padding: 10px;
@@ -13,4 +13,15 @@ textarea {
 button.recording:after {
   content: 'ING'; 
 
+}
+button.next {
+}
+#next-container {
+	background-color: #ddd;
+	height: 20px;
+	position: fixed;
+	display: none;
+	bottom: 0px;
+	right: 50px;
+	padding: 10px;
 }

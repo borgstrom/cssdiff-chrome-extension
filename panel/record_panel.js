@@ -1,7 +1,15 @@
+var curr_replace_id = 0;
+
 $(document).ready(function(){
 	$('.record').click(addRecordListener);
 	$('.differ').click(diffUsingJS);
-
+	$('.next').click(function() {
+		$("html, body").scrollTop($($('.anchor')[curr_replace_id]).offset().top);
+		curr_replace_id++;
+		if (curr_replace_id > $('.anchor').length-1) {
+			curr_replace_id = 0;
+		}
+	});
 });
 
 function addRecordListener(e) {
@@ -61,7 +69,8 @@ function diffUsingJS() {
 		baseTextName: "Bafore",
 		newTextName: "After",
 		contextSize: contextSize,
-		viewType: "sidebyside"
+		viewType: 1
 	}));
+	$('#next-container').css('display', 'block');
 }
 
