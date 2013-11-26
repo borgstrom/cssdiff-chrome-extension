@@ -1,6 +1,14 @@
+body {
+	font-family: Arial;
+	font-size: .8em;
+}
 textarea {
 	width: 100%;
 	height: 100%;
+}
+.credit {
+	display: none;
+	font-size: .6em;
 }
 .text-area {
 	float: left;
@@ -8,13 +16,20 @@ textarea {
 	width: 47%;
 	margin-right: 10px;
 	padding: 10px;
-	height: auto;
+	padding-bottom: 30px;
+	height: 100px;
+	display: none;
 }
 button.recording:after {
   content: 'ING'; 
-
 }
 button.next {
+}
+button.differ {
+	display: none;
+}
+button.zipper {
+	display: none;
 }
 #next-container {
 	background-color: #ddd;

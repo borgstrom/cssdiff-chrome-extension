@@ -1,8 +1,14 @@
-var curr_replace_id = 0;
+var curr_replace_id = 0,
+	before = "",
+	after = "";
 
 $(document).ready(function(){
 	$('.record').click(addRecordListener);
 	$('.differ').click(diffUsingJS);
+	$('.zipper').click(generateZip);
+	$('#showtext').click(function() {
+		$('.text-area').css('display',$('#showtext').prop('checked') ? 'block' : 'none');
+	});
 	$('.next').click(function() {
 		$("html, body").scrollTop($($('.anchor')[curr_replace_id]).offset().top);
 		curr_replace_id++;
@@ -10,19 +16,21 @@ $(document).ready(function(){
 			curr_replace_id = 0;
 		}
 	});
+	addRecordListener();
 });
 
 function addRecordListener(e) {
-
+	$("#app-state").text("RECORDING")
 	// get the current styles of the page
-	$(e.target).toggleClass("recording");
+	//$(e.target).toggleClass("recording");
 	chrome.devtools.inspectedWindow.getResources(function(resources) {
 		$("#before").val("");
 		for (var i = 0; i <= resources.length; i++) {
 			if (resources[i].type == "stylesheet") {
 				$("#before").val(resources[i].type);
 				var c = resources[i].getContent(function(content, encoding){
-		    		$("#before").val(content);	
+		    		$("#before").val(content);
+		    		before = content;
 		    		//alert(content);
 		    		var str = String(content).substring(0,500);
 					chrome.devtools.inspectedWindow.eval('console.log("content:'+"hello content"+'")');
@@ -45,15 +53,28 @@ function addRecordListener(e) {
 		chrome.devtools.inspectedWindow.eval('console.log("content:'+content+'")');
 	    $("#after").val("");
 	    $("#after").val(content);
+	    after = content;
+	    $("button.differ").css('display','block');
+	    $("button.zipper").css('display','block');
+	    $(".credit").css('display','block');
 	})
 }
 
+function generateZip() {
 
+	var zip = new JSZip();
+	var beforeFolder = zip.folder("before");
+	beforeFolder.file("before.css", before);
+	var afterFolder = zip.folder("after");
+	afterFolder.file("after.css", after);
+	var content = zip.generate();
+	location.href="data:application/zip;base64,"+content;
+}
 function diffUsingJS() {
 	"use strict";
 	var byId = function (id) { return document.getElementById(id); },
-		base = difflib.stringAsLines(byId("before").value),
-		newtxt = difflib.stringAsLines(byId("after").value),
+		base = difflib.stringAsLines(before),
+		newtxt = difflib.stringAsLines(after),
 		sm = new difflib.SequenceMatcher(base, newtxt),
 		opcodes = sm.get_opcodes(),
 		diffoutputdiv = byId("diffoutput"),
@@ -66,7 +87,7 @@ function diffUsingJS() {
 		baseTextLines: base,
 		newTextLines: newtxt,
 		opcodes: opcodes,
-		baseTextName: "Bafore",
+		baseTextName: "Before",
 		newTextName: "After",
 		contextSize: contextSize,
 		viewType: 1
