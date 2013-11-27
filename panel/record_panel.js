@@ -78,7 +78,7 @@ function diffUsingJS() {
 		sm = new difflib.SequenceMatcher(base, newtxt),
 		opcodes = sm.get_opcodes(),
 		diffoutputdiv = byId("diffoutput"),
-		contextSize = 0	;
+		contextSize = 10;
 
 	diffoutputdiv.innerHTML = "";
 	contextSize = contextSize || null;
