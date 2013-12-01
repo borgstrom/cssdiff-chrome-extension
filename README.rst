@@ -1,10 +1,10 @@
-cssdiff-chrome-extension
-========================
+CSS Diff Chrome Extension
+==========================
 This is a Chrome Devtools Extension that tracks changes you make via the
 inspector and provides a convenient "patch" style listing of the changes so
 that they can be easily shared.
 
-.. image:: http://i.imgur.com/W0oVhZb.png
+.. image:: http://i.imgur.com/QNshLFB.png
    :alt: Money Shot
 
 This grew out of our own frustration with how we worked with designers or art
@@ -52,6 +52,12 @@ changes.
 
 Caveats
 -------
+The initial & modified resources are tracked when the devtools panel is opened
+and this means that if you make modifications, close the devtools panel, and
+then re-open the devtools panel we'll consider the current state the "initial"
+resources. Once you start to make changes do not close the devtools panel or
+you will most likely need to reload the page and re-start all of your changes.
+
 This only works with uncompiled/unminified CSS sources because we're actually
 running a diff on the raw source in the inspected window. This shouldn't be a
 problem since this tool is meant for development purposes, but needed to be

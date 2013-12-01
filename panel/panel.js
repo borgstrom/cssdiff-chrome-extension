@@ -28,7 +28,6 @@ function byId(id) {
         }
 
         output.innerHTML = Mustache.render(template_source, context);
-        prettyPrint()
     }
 
 })(window, document);
