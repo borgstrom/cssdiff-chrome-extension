@@ -1,6 +1,6 @@
 {
   "name": "CSS Diff",
-  "version": "0.3",
+  "version": "1.0",
 
   "description": "Tracks updates to element styles in the inspector window and provides a diff of any changes",
 
