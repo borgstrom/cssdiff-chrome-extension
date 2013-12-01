@@ -9,7 +9,7 @@ that they can be easily shared.
 
 This grew out of our own frustration with how we worked with designers or art
 directors. Typically we'll get a screenshot emailed to you highlighting the
-changes they want made so that they're layouts are "pixel perfect".
+changes they want made so that their layouts are "pixel perfect".
 
 Once these design types are introduced to the inspector they find joy in the
 ability to endlessly play & tweak values, but we found that there was still no
