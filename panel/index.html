@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="panel.css">
+        <link rel="stylesheet" type="text/css" href="diffview.css">
+    </head>
+
+
+    <body>
+        <div id="output"></div>
+
+        <script id="output-template" type="text/x-handlebars-template">
+            {{#resources}}
+            <h1>{{url}}</h1>
+            <div class="diff">{{&diff}}</div>
+            {{/resources}}
+        </script>
+
+        <script type="text/javascript" src="mustache.js"></script>
+        <script type="text/javascript" src="difflib.js"></script>
+        <script type="text/javascript" src="diffview.js"></script>
+        <script type="text/javascript" src="panel.js"></script>
+    </body>
+</html>
