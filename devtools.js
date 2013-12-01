@@ -1,5 +1,5 @@
 chrome.devtools.panels.create(
-    'CSS Change Tracker',
+    'CSS Diff',
     null, // No icon path
     'panel/index.html',
     function(panel) {

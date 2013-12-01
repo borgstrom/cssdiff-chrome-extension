@@ -1,5 +1,5 @@
 {
-  "name": "CSS Change Tracker",
+  "name": "CSS Diff",
   "description": "Tracks changes to elements in the inspector window and provides a diff of any changes",
   "version": "0.2",
   "devtools_page": "devtools.html",
