@@ -62,3 +62,23 @@ This only works with uncompiled/unminified CSS sources because we're actually
 running a diff on the raw source in the inspected window. This shouldn't be a
 problem since this tool is meant for development purposes, but needed to be
 called out.
+
+3rd party software
+------------------
+The CSS Diff extension contains the following software:
+
+* **jsdiff**
+  https://github.com/kpdecker/jsdiff
+  BSD license
+
+* **Mustache (Javascript)**
+  https://github.com/janl/mustache.js
+  MIT license
+
+Authors
+-------
+The following fine individuals have contributed to this software:
+
+* @jondavey
+* @brentsmyth
+* @borgstrom
