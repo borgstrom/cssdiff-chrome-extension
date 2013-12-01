@@ -4,7 +4,7 @@ This is a Chrome Devtools Extension that tracks changes you make via the
 inspector and provides a convenient "patch" style listing of the changes so
 that they can be easily shared.
 
-.. image:: http://i.imgur.com/XoI2vII.png
+.. image:: http://i.imgur.com/W0oVhZb.png
    :alt: Money Shot
 
 This grew out of our own frustration with how we worked with designers or art
