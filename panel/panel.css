@@ -1,13 +1,4 @@
 *, html, body {
-    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    font-family: 'Inconsolata', 'Monaco', 'Courier New', 'Courier', monospace;
     font-size: 16px;
-}
-
-#output table {
-    width: 100%;
-}
-
-#output table tr > th:nth-child(1),
-#output table tr > th:nth-child(2) {
-    display: none;
 }
