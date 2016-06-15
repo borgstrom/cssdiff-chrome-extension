@@ -31,6 +31,12 @@ And voila. This extension was built.
 
 Installation
 ------------
+You can install the extension directly from the Chrom Web Store:
+
+https://chrome.google.com/webstore/detail/css-diff/bnkooidmjbobfbgncondmfoajbpafjio?hl=en
+
+Development Installation
+~~~~~~~~~~~~~~~~~~~~~~~~
 * Clone this repository
 * Open the Chrome extensions page by typing the following in your address
   bar::
@@ -40,8 +46,6 @@ Installation
 * Ensure Developer Mode is enable (top right)
 * Choose ``Load Unpacked Extension``
 * Select the directory that was created when you cloned the repository
-
-TODO: Get this in the Chrome web store.
 
 Usage
 -----

@@ -1,14 +1,12 @@
 {
+  "manifest_version": 2,
   "name": "CSS Diff",
   "version": "1.0",
-
-  "description": "Tracks updates to element styles in the inspector window and provides a diff of any changes",
-
+  "author": "Evan Borgstrom",
+  "description": "As you make CSS changes in the DevTools inspector window this will track your changes and provide you with a nicely formatted diff",
   "icons": {
-      "48": "assets/cssdiff-icon-48x48.png",
-      "128": "assets/cssdiff-icon.png"
+      "48": "icon-48.png",
+      "128": "icon-128.png"
   },
-
-  "devtools_page": "devtools.html",
-  "manifest_version": 2
+  "devtools_page": "devtools.html"
 }
